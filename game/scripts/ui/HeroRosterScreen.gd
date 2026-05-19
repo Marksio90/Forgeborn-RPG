@@ -11,6 +11,6 @@ func _ready() -> void:
 	var heroes: Array = GameData.heroes.get_all_heroes()
 	lines.append("Heroes loaded: %d" % heroes.size())
 	for hero in heroes:
-		var hero_name := str((hero as Dictionary).get("name", "Unknown Hero"))
+		var hero_name: String = str((hero as Dictionary).get("name", "Unknown Hero"))
 		lines.append("• %s" % hero_name)
 	description_label.text = "\n".join(lines)

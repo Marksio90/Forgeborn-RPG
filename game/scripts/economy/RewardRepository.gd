@@ -10,12 +10,12 @@ func _ready() -> void:
 
 func load_reward_tables() -> void:
 	reward_tables_by_id.clear()
-	var root := JsonDataLoader.load_json_file(REWARDS_PATH)
+	var root: Variant = JsonDataLoader.load_json_file(REWARDS_PATH)
 	if root == null:
 		return
 
-	var records := _resolve_reward_list(root)
-	for table_data in records:
+	var records: Array = _resolve_reward_list(root)
+	for table_data: Variant in records:
 		if typeof(table_data) != TYPE_DICTIONARY:
 			push_error("Skipping reward table with invalid type in %s" % REWARDS_PATH)
 			continue
@@ -24,7 +24,7 @@ func load_reward_tables() -> void:
 		if not DataValidation.has_required_fields(table, ["id"], "RewardRepository(%s) record" % REWARDS_PATH):
 			continue
 
-		var table_id := str(table["id"])
+		var table_id: String = str(table["id"])
 		if table_id.is_empty():
 			push_error("RewardRepository(%s) has empty id; skipping record." % REWARDS_PATH)
 			continue
@@ -65,7 +65,7 @@ func _resolve_reward_list(root: Variant) -> Array:
 
 	var dictionary_as_array: Array = []
 	for key in root.keys():
-		var value = root[key]
+		var value: Variant = root[key]
 		if typeof(value) == TYPE_DICTIONARY:
 			var record: Dictionary = value.duplicate(true)
 			if not record.has("id"):

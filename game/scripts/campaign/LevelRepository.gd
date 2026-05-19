@@ -13,12 +13,12 @@ func _ready() -> void:
 func load_levels() -> void:
 	levels_by_id.clear()
 	levels_by_region.clear()
-	var root := JsonDataLoader.load_json_file(FOREST_LEVELS_PATH)
+	var root: Variant = JsonDataLoader.load_json_file(FOREST_LEVELS_PATH)
 	if root == null:
 		return
 
-	var records := _resolve_record_list(root, "levels", FOREST_LEVELS_PATH)
-	for level_data in records:
+	var records: Array = _resolve_record_list(root, "levels", FOREST_LEVELS_PATH)
+	for level_data: Variant in records:
 		if typeof(level_data) != TYPE_DICTIONARY:
 			push_error("Skipping level record with invalid type in %s" % FOREST_LEVELS_PATH)
 			continue
@@ -31,7 +31,7 @@ func load_levels() -> void:
 			push_error("%s missing id; skipping record." % source_name)
 			continue
 
-		var level_id := str(level["id"])
+		var level_id: String = str(level["id"])
 		if level_id.is_empty():
 			push_error("%s has empty id; skipping record." % source_name)
 			continue
@@ -40,7 +40,7 @@ func load_levels() -> void:
 			push_warning("Duplicate level id detected: %s. Overwriting previous record." % level_id)
 		levels_by_id[level_id] = level.duplicate(true)
 
-		var region_id := str(level.get("region", "unknown"))
+		var region_id: String = str(level.get("region", "unknown"))
 		if not levels_by_region.has(region_id):
 			levels_by_region[region_id] = []
 		(levels_by_region[region_id] as Array).append(level.duplicate(true))

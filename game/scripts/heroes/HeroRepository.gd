@@ -13,12 +13,12 @@ func _ready() -> void:
 
 func load_heroes() -> void:
 	heroes_by_id.clear()
-	var root := JsonDataLoader.load_json_file(HEROES_PATH)
+	var root: Variant = JsonDataLoader.load_json_file(HEROES_PATH)
 	if root == null:
 		return
 
-	var records := _resolve_record_list(root, "heroes", HEROES_PATH)
-	for hero_data in records:
+	var records: Array = _resolve_record_list(root, "heroes", HEROES_PATH)
+	for hero_data: Variant in records:
 		if typeof(hero_data) != TYPE_DICTIONARY:
 			push_error("Skipping hero record with invalid type in %s" % HEROES_PATH)
 			continue
@@ -31,7 +31,7 @@ func load_heroes() -> void:
 			push_error("%s missing id; skipping record." % source_name)
 			continue
 
-		var hero_id := str(hero["id"])
+		var hero_id: String = str(hero["id"])
 		if hero_id.is_empty():
 			push_error("%s has empty id; skipping record." % source_name)
 			continue
