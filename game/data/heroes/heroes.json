@@ -1,7 +1,52 @@
 {
   "heroes": [
-    {"id": "kael_ironhand", "name": "Kael Ironhand", "class": "Vanguard"},
-    {"id": "lyra_asharrow", "name": "Lyra Asharrow", "class": "Ranger"},
-    {"id": "mira_lightgiver", "name": "Mira Lightgiver", "class": "Cleric"}
+    {
+      "id": "kael_ironhand",
+      "name": "Kael Ironhand",
+      "display_name_pl": "Kael Żelazna Dłoń",
+      "class": "tank",
+      "faction": "iron_guard",
+      "rarity": "rare",
+      "base_hp": 320,
+      "base_attack": 42,
+      "base_defense": 35,
+      "base_speed": 8,
+      "crit_chance": 0.05,
+      "crit_damage": 1.5,
+      "skill_id": "steel_wall",
+      "description": "A defensive warrior of the Iron Guard."
+    },
+    {
+      "id": "lyra_asharrow",
+      "name": "Lyra Asharrow",
+      "display_name_pl": "Lyra Popielna Strzała",
+      "class": "archer",
+      "faction": "ash_hunters",
+      "rarity": "rare",
+      "base_hp": 210,
+      "base_attack": 58,
+      "base_defense": 18,
+      "base_speed": 14,
+      "crit_chance": 0.12,
+      "crit_damage": 1.7,
+      "skill_id": "weak_point_shot",
+      "description": "A fast ranged attacker from the Ash Hunters."
+    },
+    {
+      "id": "mira_lightgiver",
+      "name": "Mira Lightgiver",
+      "display_name_pl": "Mira Światłodajna",
+      "class": "healer",
+      "faction": "order_of_runes",
+      "rarity": "rare",
+      "base_hp": 240,
+      "base_attack": 30,
+      "base_defense": 22,
+      "base_speed": 10,
+      "crit_chance": 0.04,
+      "crit_damage": 1.4,
+      "skill_id": "renewing_light",
+      "description": "A support healer from the Order of Runes."
+    }
   ]
 }
