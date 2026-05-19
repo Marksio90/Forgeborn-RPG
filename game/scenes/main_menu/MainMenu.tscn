@@ -1,4 +1,9 @@
-[gd_scene format=3]
+[gd_scene load_steps=3 format=3 uid="uid://b1av4t7g2qvxm"]
+
+[ext_resource type="Script" path="res://scripts/ui/MainMenu.gd" id="1_m0n0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(0.06, 0.06, 0.1, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +12,100 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_m0n0")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.04, 0.07, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 60
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bg")
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer/CenterContainer/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="MarginContainer/CenterContainer/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "FORGEBORN"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/CenterContainer/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Idle Tactical RPG"
+horizontal_alignment = 1
+
+[node name="Version" type="Label" parent="MarginContainer/CenterContainer/Panel/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "MVP Prototype"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="MarginContainer/CenterContainer/Panel/VBox"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="CampaignButton" type="Button" parent="MarginContainer/CenterContainer/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 64)
+layout_mode = 2
+text = "Campaign"
+
+[node name="HeroesButton" type="Button" parent="MarginContainer/CenterContainer/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 64)
+layout_mode = 2
+text = "Heroes"
+
+[node name="InventoryButton" type="Button" parent="MarginContainer/CenterContainer/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 64)
+layout_mode = 2
+text = "Inventory"
+
+[node name="ForgeButton" type="Button" parent="MarginContainer/CenterContainer/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 64)
+layout_mode = 2
+text = "Forge"
+
+[node name="BattleTestButton" type="Button" parent="MarginContainer/CenterContainer/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 64)
+layout_mode = 2
+text = "Battle Test"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/CenterContainer/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 64)
+layout_mode = 2
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/CenterContainer/Panel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 64)
+layout_mode = 2
+text = "Quit"

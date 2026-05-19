@@ -77,3 +77,9 @@
 - Scope: Balance pass, bug fixes, and smoke checks.
 - Files: `docs/BALANCE_TABLES.md`, workflow validation.
 - Acceptance: CI passes and MVP scope locked.
+
+## Prompt 1 Update (Completed on 2026-05-19)
+- Implemented Main Menu UI with title, subtitle, MVP version label, and navigation buttons.
+- Implemented SceneRouter singleton API for all placeholder destination scenes.
+- Added settings placeholder scene and reusable Back to Main Menu button behavior.
+- Updated project settings for portrait-friendly mobile prototype layout (720x1280, canvas_items/expand).
