@@ -6,16 +6,16 @@ static func load_json_file(path: String) -> Variant:
 		push_error("JSON file not found: %s" % path)
 		return null
 
-	var file := FileAccess.open(path, FileAccess.READ)
+	var file: FileAccess = FileAccess.open(path, FileAccess.READ)
 	if file == null:
 		push_error("Could not open JSON file: %s" % path)
 		return null
 
-	var text := file.get_as_text()
+	var text: String = file.get_as_text()
 	file.close()
 
-	var json := JSON.new()
-	var parse_error := json.parse(text)
+	var json: JSON = JSON.new()
+	var parse_error: Error = json.parse(text)
 	if parse_error != OK:
 		push_error(
 			"Failed to parse JSON file: %s (line %d) error: %s"

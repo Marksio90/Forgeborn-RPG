@@ -1,16 +1,13 @@
 extends Control
 
-@onready var description_label: Label = $MarginContainer/VBox/Description
+@onready var debug_label: Label = get_node_or_null("MarginContainer/VBox/Description")
 
 func _ready() -> void:
-	var lines: Array[String] = []
-	if GameData == null or GameData.heroes == null:
-		description_label.text = "Heroes loaded: 0\n(GameData unavailable)"
+	if debug_label == null:
 		return
 
-	var heroes: Array = GameData.heroes.get_all_heroes()
-	lines.append("Heroes loaded: %d" % heroes.size())
-	for hero in heroes:
-		var hero_name: String = str((hero as Dictionary).get("name", "Unknown Hero"))
-		lines.append("• %s" % hero_name)
-	description_label.text = "\n".join(lines)
+	var count: int = 0
+	if GameData != null and GameData.heroes != null and GameData.heroes.has_method("get_hero_count"):
+		count = int(GameData.heroes.call("get_hero_count"))
+
+	debug_label.text = "Heroes loaded: " + str(count)
