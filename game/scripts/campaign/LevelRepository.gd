@@ -2,7 +2,17 @@ extends Node
 class_name LevelRepository
 
 const FOREST_LEVELS_PATH := "res://data/levels/levels_forest_of_ash.json"
-const REQUIRED_FIELDS: Array[String] = ["id", "name", "region", "recommended_power", "enemy_ids", "reward_table"]
+const REQUIRED_FIELDS: Array[String] = [
+	"id",
+	"name",
+	"display_name_pl",
+	"region",
+	"recommended_power",
+	"enemy_ids",
+	"reward_table",
+	"unlocks_after_completion",
+	"description"
+]
 
 var levels_by_id: Dictionary = {}
 var levels_by_region: Dictionary = {}

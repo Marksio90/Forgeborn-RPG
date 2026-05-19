@@ -3,7 +3,20 @@ class_name HeroRepository
 
 const HEROES_PATH := "res://data/heroes/heroes.json"
 const REQUIRED_FIELDS: Array[String] = [
-	"id", "name", "class", "faction", "rarity", "base_hp", "base_attack", "base_defense", "base_speed", "skill_id"
+	"id",
+	"name",
+	"display_name_pl",
+	"class",
+	"faction",
+	"rarity",
+	"base_hp",
+	"base_attack",
+	"base_defense",
+	"base_speed",
+	"crit_chance",
+	"crit_damage",
+	"skill_id",
+	"description"
 ]
 
 var heroes_by_id: Dictionary = {}

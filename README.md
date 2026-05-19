@@ -40,3 +40,8 @@ Forgeborn RPG is a Godot 4.x turn-based RPG prototype focused on hero collection
 - Added JSON loading utility and reusable data validation helper.
 - Implemented repositories for heroes, enemies, items, levels, and reward tables with ID indexing and safe fallbacks.
 - Added lightweight Hero Roster debug output to prove repository-backed data is loading.
+
+## Prompt 2.10 Status (Implemented)
+- Repaired static JSON schemas and starter records for heroes (3), enemies (3), items (3), levels (3), and reward tables (4).
+- Repository required-field validation now matches the intended starter data model.
+- Added lightweight cross-reference validation in `GameData` for rewards, enemies, levels, and unlock chains.

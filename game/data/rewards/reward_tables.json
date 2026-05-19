@@ -1,13 +1,38 @@
-{
-  "reward_tables": [
-    {
-      "id": "default_forest_rewards",
-      "currency": {"gold_min": 10, "gold_max": 25},
-      "drops": [
-        {"item_id": "rusty_sword", "weight": 20},
-        {"item_id": "iron_shield", "weight": 10},
-        {"item_id": "apprentice_amulet", "weight": 5}
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "basic_forest_enemy",
+    "gold_min": 5,
+    "gold_max": 12,
+    "xp_min": 8,
+    "xp_max": 15,
+    "item_drop_chance": 0.05,
+    "possible_items": ["rusty_sword"]
+  },
+  {
+    "id": "elite_forest_enemy",
+    "gold_min": 15,
+    "gold_max": 30,
+    "xp_min": 20,
+    "xp_max": 40,
+    "item_drop_chance": 0.12,
+    "possible_items": ["iron_shield", "apprentice_amulet"]
+  },
+  {
+    "id": "forest_level_early",
+    "gold_min": 20,
+    "gold_max": 45,
+    "xp_min": 25,
+    "xp_max": 55,
+    "item_drop_chance": 0.08,
+    "possible_items": ["rusty_sword", "iron_shield"]
+  },
+  {
+    "id": "forest_level_mid",
+    "gold_min": 40,
+    "gold_max": 80,
+    "xp_min": 60,
+    "xp_max": 100,
+    "item_drop_chance": 0.15,
+    "possible_items": ["iron_shield", "apprentice_amulet"]
+  }
+]

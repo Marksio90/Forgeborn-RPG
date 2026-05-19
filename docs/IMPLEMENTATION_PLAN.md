@@ -90,3 +90,9 @@
 - Added repository implementations for heroes, enemies, items, campaign levels, and reward tables.
 - Added `GameData` singleton autoload wiring in `project.godot` and startup data summary output.
 - Added basic Hero Roster debug display listing loaded hero count/names from GameData.
+
+## Prompt 2.10 Update (Completed on 2026-05-19)
+- Repaired schema/data consistency for all static repositories (heroes, enemies, items, levels, rewards).
+- Updated repository required fields to match the intended starter model.
+- Improved `DataValidation` error messages with source + record ID + missing field.
+- Added cross-reference validation in `GameData` to catch broken IDs early.

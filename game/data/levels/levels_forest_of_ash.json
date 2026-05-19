@@ -1,7 +1,35 @@
-{
-  "levels": [
-    {"id": "forest_ash_001", "name": "Forest Trailhead", "recommended_level": 1},
-    {"id": "forest_ash_002", "name": "Charred Clearing", "recommended_level": 2},
-    {"id": "forest_ash_003", "name": "Knight's Grave", "recommended_level": 3}
-  ]
-}
+[
+  {
+    "id": "forest_ash_001",
+    "name": "Path Near the Ruins",
+    "display_name_pl": "Ścieżka przy ruinach",
+    "region": "forest_of_ash",
+    "recommended_power": 100,
+    "enemy_ids": ["shadow_rat"],
+    "reward_table": "forest_level_early",
+    "unlocks_after_completion": "forest_ash_002",
+    "description": "The first path leading into the corrupted forest."
+  },
+  {
+    "id": "forest_ash_002",
+    "name": "Abandoned Road",
+    "display_name_pl": "Opuszczony trakt",
+    "region": "forest_of_ash",
+    "recommended_power": 150,
+    "enemy_ids": ["shadow_rat", "cursed_scout"],
+    "reward_table": "forest_level_early",
+    "unlocks_after_completion": "forest_ash_003",
+    "description": "A broken road watched by cursed scouts."
+  },
+  {
+    "id": "forest_ash_003",
+    "name": "Broken Shrine",
+    "display_name_pl": "Złamana kapliczka",
+    "region": "forest_of_ash",
+    "recommended_power": 220,
+    "enemy_ids": ["cursed_scout", "fallen_knight"],
+    "reward_table": "forest_level_mid",
+    "unlocks_after_completion": "",
+    "description": "A ruined shrine guarded by a fallen knight."
+  }
+]

@@ -1,7 +1,40 @@
-{
-  "items": [
-    {"id": "rusty_sword", "name": "Rusty Sword", "slot": "weapon"},
-    {"id": "iron_shield", "name": "Iron Shield", "slot": "offhand"},
-    {"id": "apprentice_amulet", "name": "Apprentice Amulet", "slot": "accessory"}
-  ]
-}
+[
+  {
+    "id": "rusty_sword",
+    "name": "Rusty Sword",
+    "display_name_pl": "Zardzewiały Miecz",
+    "slot": "weapon",
+    "rarity": "common",
+    "bonuses": {
+      "attack": 6
+    },
+    "sell_value": 10,
+    "description": "An old blade. Weak, but better than bare hands."
+  },
+  {
+    "id": "iron_shield",
+    "name": "Iron Shield",
+    "display_name_pl": "Żelazna Tarcza",
+    "slot": "offhand",
+    "rarity": "common",
+    "bonuses": {
+      "defense": 7,
+      "hp": 20
+    },
+    "sell_value": 12,
+    "description": "A simple iron shield used by novice defenders."
+  },
+  {
+    "id": "apprentice_amulet",
+    "name": "Apprentice Amulet",
+    "display_name_pl": "Amulet Ucznia",
+    "slot": "amulet",
+    "rarity": "rare",
+    "bonuses": {
+      "hp": 35,
+      "speed": 1
+    },
+    "sell_value": 25,
+    "description": "A small runic charm carried by young adepts."
+  }
+]

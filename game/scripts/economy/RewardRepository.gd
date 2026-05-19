@@ -2,6 +2,15 @@ extends Node
 class_name RewardRepository
 
 const REWARDS_PATH := "res://data/rewards/reward_tables.json"
+const REQUIRED_FIELDS: Array[String] = [
+	"id",
+	"gold_min",
+	"gold_max",
+	"xp_min",
+	"xp_max",
+	"item_drop_chance",
+	"possible_items"
+]
 
 var reward_tables_by_id: Dictionary = {}
 
@@ -21,7 +30,7 @@ func load_reward_tables() -> void:
 			continue
 
 		var table: Dictionary = table_data
-		if not DataValidation.has_required_fields(table, ["id"], "RewardRepository(%s) record" % REWARDS_PATH):
+		if not DataValidation.has_required_fields(table, REQUIRED_FIELDS, "RewardRepository(%s)" % REWARDS_PATH):
 			continue
 
 		var table_id: String = str(table["id"])

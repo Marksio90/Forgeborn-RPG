@@ -3,7 +3,16 @@ class_name EnemyRepository
 
 const ENEMIES_PATH := "res://data/enemies/enemies.json"
 const REQUIRED_FIELDS: Array[String] = [
-	"id", "name", "base_hp", "base_attack", "base_defense", "base_speed", "reward_table"
+	"id",
+	"name",
+	"display_name_pl",
+	"type",
+	"base_hp",
+	"base_attack",
+	"base_defense",
+	"base_speed",
+	"reward_table",
+	"description"
 ]
 
 var enemies_by_id: Dictionary = {}

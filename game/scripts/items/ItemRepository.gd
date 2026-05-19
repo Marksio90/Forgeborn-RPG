@@ -2,7 +2,16 @@ extends Node
 class_name ItemRepository
 
 const ITEMS_PATH := "res://data/items/items.json"
-const REQUIRED_FIELDS: Array[String] = ["id", "name", "slot", "rarity", "bonuses"]
+const REQUIRED_FIELDS: Array[String] = [
+	"id",
+	"name",
+	"display_name_pl",
+	"slot",
+	"rarity",
+	"bonuses",
+	"sell_value",
+	"description"
+]
 
 var items_by_id: Dictionary = {}
 
