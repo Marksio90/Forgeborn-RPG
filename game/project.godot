@@ -18,6 +18,7 @@ renderer/rendering_method="forward_plus"
 [autoload]
 
 SceneRouter="*res://scripts/core/SceneRouter.gd"
+GameData="*res://scripts/core/GameData.gd"
 
 [display]
 
