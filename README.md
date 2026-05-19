@@ -27,3 +27,9 @@ Forgeborn RPG is a Godot 4.x turn-based RPG prototype focused on hero collection
 - Live service / online multiplayer.
 - Advanced VFX/audio polish.
 - Full production content pipeline and monetization.
+
+## Prompt 1 Status (Implemented)
+- Added a mobile-friendly main menu shell with routing buttons.
+- Added reusable scene routing via `SceneRouter` autoload.
+- Added consistent placeholder screens with Back to Main Menu navigation.
+- Tuned project window/stretch defaults for portrait prototype testing.
