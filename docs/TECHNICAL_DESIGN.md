@@ -1,7 +1,7 @@
 # Technical Design
 
 ## Engine
-- Godot 4.x project under `game/`.
+- Godot 4.6+ (Godot 4.x) project under `game/`
 
 ## High-level Modules
 - Core: app lifecycle and scene routing.
@@ -21,3 +21,7 @@
 - `JsonDataLoader` handles file existence checks, parse safety, and error reporting for `res://data/*` JSON.
 - `DataValidation` provides required-field checks used by repositories without duplicating validation loops.
 - Repositories index records by stable `id`, expose get/list/has/count APIs, and return immutable copies to callers.
+
+
+## Compatibility Note
+- The project targets Godot 4.6. The `project.godot` file and autoloads must remain compatible with Godot 4.x.
