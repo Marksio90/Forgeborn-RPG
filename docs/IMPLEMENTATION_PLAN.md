@@ -83,3 +83,10 @@
 - Implemented SceneRouter singleton API for all placeholder destination scenes.
 - Added settings placeholder scene and reusable Back to Main Menu button behavior.
 - Updated project settings for portrait-friendly mobile prototype layout (720x1280, canvas_items/expand).
+
+
+## Prompt 2 Update (Completed on 2026-05-19)
+- Re-scoped Prompt 2 from battle skeleton to static JSON data loading repositories.
+- Added repository implementations for heroes, enemies, items, campaign levels, and reward tables.
+- Added `GameData` singleton autoload wiring in `project.godot` and startup data summary output.
+- Added basic Hero Roster debug display listing loaded hero count/names from GameData.
