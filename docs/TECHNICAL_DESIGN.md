@@ -25,3 +25,8 @@
 
 ## Compatibility Note
 - The project targets Godot 4.6. The `project.godot` file and autoloads must remain compatible with Godot 4.x.
+
+## Prompt 2.10 Data Integrity Update
+- Static repositories now load a fully consistent starter dataset: 3 heroes, 3 enemies, 3 items, 3 levels, and 4 reward tables.
+- Required-field schema validation is enforced per repository with record-aware error messages.
+- `GameData` now runs lightweight cross-reference checks (enemy reward tables, level reward tables, level enemy IDs, reward item IDs, and level unlock links).

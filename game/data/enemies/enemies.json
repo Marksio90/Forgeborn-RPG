@@ -1,7 +1,38 @@
-{
-  "enemies": [
-    {"id": "shadow_rat", "name": "Shadow Rat", "tier": 1},
-    {"id": "cursed_scout", "name": "Cursed Scout", "tier": 1},
-    {"id": "fallen_knight", "name": "Fallen Knight", "tier": 2}
-  ]
-}
+[
+  {
+    "id": "shadow_rat",
+    "name": "Shadow Rat",
+    "display_name_pl": "Szczur Cienia",
+    "type": "beast",
+    "base_hp": 80,
+    "base_attack": 12,
+    "base_defense": 4,
+    "base_speed": 10,
+    "reward_table": "basic_forest_enemy",
+    "description": "A weak corrupted beast from the Forest of Ash."
+  },
+  {
+    "id": "cursed_scout",
+    "name": "Cursed Scout",
+    "display_name_pl": "Przeklęty Zwiadowca",
+    "type": "humanoid",
+    "base_hp": 120,
+    "base_attack": 18,
+    "base_defense": 8,
+    "base_speed": 13,
+    "reward_table": "basic_forest_enemy",
+    "description": "A fast scout corrupted by shadow magic."
+  },
+  {
+    "id": "fallen_knight",
+    "name": "Fallen Knight",
+    "display_name_pl": "Upadły Rycerz",
+    "type": "undead",
+    "base_hp": 220,
+    "base_attack": 26,
+    "base_defense": 20,
+    "base_speed": 6,
+    "reward_table": "elite_forest_enemy",
+    "description": "A former knight bound to the ruins by a dark curse."
+  }
+]
