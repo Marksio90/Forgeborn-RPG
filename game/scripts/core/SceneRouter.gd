@@ -33,6 +33,6 @@ func _change_scene(scene_path: String) -> void:
 		push_error("Scene path does not exist: " + scene_path)
 		return
 
-	var error: int = get_tree().change_scene_to_file(scene_path)
+	var error: Error = get_tree().change_scene_to_file(scene_path)
 	if error != OK:
 		push_error("Failed to change scene to: %s (error %d)" % [scene_path, error])
