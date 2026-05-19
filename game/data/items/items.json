@@ -1,0 +1,7 @@
+{
+  "items": [
+    {"id": "rusty_sword", "name": "Rusty Sword", "slot": "weapon"},
+    {"id": "iron_shield", "name": "Iron Shield", "slot": "offhand"},
+    {"id": "apprentice_amulet", "name": "Apprentice Amulet", "slot": "accessory"}
+  ]
+}

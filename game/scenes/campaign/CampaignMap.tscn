@@ -1,0 +1,3 @@
+[gd_scene format=3]
+
+[node name="CampaignMap" type="Node2D"]

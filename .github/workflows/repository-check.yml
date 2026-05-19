@@ -1,0 +1,31 @@
+name: Repository Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify required docs
+        run: |
+          test -f docs/GDD.md
+          test -f docs/TECHNICAL_DESIGN.md
+          test -f docs/IMPLEMENTATION_PLAN.md
+          test -f docs/GOOGLE_PLAY_CHECKLIST.md
+          test -f docs/BALANCE_TABLES.md
+
+      - name: Validate JSON files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for path in Path('game/data').rglob('*.json'):
+              with path.open('r', encoding='utf-8') as f:
+                  json.load(f)
+          print('JSON validation passed.')
+          PY
