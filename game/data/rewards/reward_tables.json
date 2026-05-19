@@ -1,0 +1,13 @@
+{
+  "reward_tables": [
+    {
+      "id": "default_forest_rewards",
+      "currency": {"gold_min": 10, "gold_max": 25},
+      "drops": [
+        {"item_id": "rusty_sword", "weight": 20},
+        {"item_id": "iron_shield", "weight": 10},
+        {"item_id": "apprentice_amulet", "weight": 5}
+      ]
+    }
+  ]
+}

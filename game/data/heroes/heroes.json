@@ -1,0 +1,7 @@
+{
+  "heroes": [
+    {"id": "kael_ironhand", "name": "Kael Ironhand", "class": "Vanguard"},
+    {"id": "lyra_asharrow", "name": "Lyra Asharrow", "class": "Ranger"},
+    {"id": "mira_lightgiver", "name": "Mira Lightgiver", "class": "Cleric"}
+  ]
+}

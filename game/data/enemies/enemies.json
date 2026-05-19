@@ -1,0 +1,7 @@
+{
+  "enemies": [
+    {"id": "shadow_rat", "name": "Shadow Rat", "tier": 1},
+    {"id": "cursed_scout", "name": "Cursed Scout", "tier": 1},
+    {"id": "fallen_knight", "name": "Fallen Knight", "tier": 2}
+  ]
+}
