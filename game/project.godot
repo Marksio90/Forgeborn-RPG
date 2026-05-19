@@ -1,24 +1,13 @@
 ; Engine configuration file.
-; It's best edited using the editor and not directly.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
+; It's best edited using the editor UI and not directly.
 
 config_version=5
 
 [application]
+
 config/name="Forgeborn"
 run/main_scene="res://scenes/main_menu/MainMenu.tscn"
 config/features=PackedStringArray("4.6")
-
-[rendering]
-renderer/rendering_method="forward_plus"
-
-[autoload]
-
-SceneRouter="*res://scripts/core/SceneRouter.gd"
-GameData="*res://scripts/core/GameData.gd"
 
 [display]
 
