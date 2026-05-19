@@ -11,12 +11,12 @@ func _ready() -> void:
 
 func load_items() -> void:
 	items_by_id.clear()
-	var root := JsonDataLoader.load_json_file(ITEMS_PATH)
+	var root: Variant = JsonDataLoader.load_json_file(ITEMS_PATH)
 	if root == null:
 		return
 
-	var records := _resolve_record_list(root, "items", ITEMS_PATH)
-	for item_data in records:
+	var records: Array = _resolve_record_list(root, "items", ITEMS_PATH)
+	for item_data: Variant in records:
 		if typeof(item_data) != TYPE_DICTIONARY:
 			push_error("Skipping item record with invalid type in %s" % ITEMS_PATH)
 			continue
@@ -29,7 +29,7 @@ func load_items() -> void:
 			push_error("%s missing id; skipping record." % source_name)
 			continue
 
-		var item_id := str(item["id"])
+		var item_id: String = str(item["id"])
 		if item_id.is_empty():
 			push_error("%s has empty id; skipping record." % source_name)
 			continue

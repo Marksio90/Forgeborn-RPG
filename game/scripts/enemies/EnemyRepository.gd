@@ -13,12 +13,12 @@ func _ready() -> void:
 
 func load_enemies() -> void:
 	enemies_by_id.clear()
-	var root := JsonDataLoader.load_json_file(ENEMIES_PATH)
+	var root: Variant = JsonDataLoader.load_json_file(ENEMIES_PATH)
 	if root == null:
 		return
 
-	var records := _resolve_record_list(root, "enemies", ENEMIES_PATH)
-	for enemy_data in records:
+	var records: Array = _resolve_record_list(root, "enemies", ENEMIES_PATH)
+	for enemy_data: Variant in records:
 		if typeof(enemy_data) != TYPE_DICTIONARY:
 			push_error("Skipping enemy record with invalid type in %s" % ENEMIES_PATH)
 			continue
@@ -31,7 +31,7 @@ func load_enemies() -> void:
 			push_error("%s missing id; skipping record." % source_name)
 			continue
 
-		var enemy_id := str(enemy["id"])
+		var enemy_id: String = str(enemy["id"])
 		if enemy_id.is_empty():
 			push_error("%s has empty id; skipping record." % source_name)
 			continue

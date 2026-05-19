@@ -1,13 +1,11 @@
 extends Node
-class_name SceneRouter
-
-const MAIN_MENU_SCENE := "res://scenes/main_menu/MainMenu.tscn"
-const CAMPAIGN_SCENE := "res://scenes/campaign/CampaignMap.tscn"
-const HEROES_SCENE := "res://scenes/heroes/HeroRoster.tscn"
-const INVENTORY_SCENE := "res://scenes/inventory/InventoryScreen.tscn"
-const FORGE_SCENE := "res://scenes/forge/ForgeScreen.tscn"
-const BATTLE_SCENE := "res://scenes/battle/BattleScene.tscn"
-const SETTINGS_SCENE := "res://scenes/ui/SettingsScreen.tscn"
+const MAIN_MENU_SCENE: String = "res://scenes/main_menu/MainMenu.tscn"
+const CAMPAIGN_SCENE: String = "res://scenes/campaign/CampaignMap.tscn"
+const HEROES_SCENE: String = "res://scenes/heroes/HeroRoster.tscn"
+const INVENTORY_SCENE: String = "res://scenes/inventory/InventoryScreen.tscn"
+const FORGE_SCENE: String = "res://scenes/forge/ForgeScreen.tscn"
+const BATTLE_SCENE: String = "res://scenes/battle/BattleScene.tscn"
+const SETTINGS_SCENE: String = "res://scenes/ui/SettingsScreen.tscn"
 
 func go_to_main_menu() -> void:
 	_change_scene(MAIN_MENU_SCENE)
@@ -35,6 +33,6 @@ func _change_scene(scene_path: String) -> void:
 		push_error("Scene path does not exist: " + scene_path)
 		return
 
-	var error := get_tree().change_scene_to_file(scene_path)
+	var error: int = get_tree().change_scene_to_file(scene_path)
 	if error != OK:
 		push_error("Failed to change scene to: %s (error %d)" % [scene_path, error])
