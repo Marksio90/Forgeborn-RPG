@@ -25,7 +25,10 @@ func load_heroes() -> void:
 
 		var hero: Dictionary = hero_data
 		var source_name := "HeroRepository(%s)" % HEROES_PATH
-		DataValidation.has_required_fields(hero, REQUIRED_FIELDS, "%s record" % source_name)
+		var record_label := "%s record" % source_name
+		if hero.has("id"):
+			record_label = "%s record '%s'" % [source_name, str(hero["id"])]
+		DataValidation.has_required_fields(hero, REQUIRED_FIELDS, record_label)
 
 		if not hero.has("id"):
 			push_error("%s missing id; skipping record." % source_name)
